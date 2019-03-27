@@ -6,6 +6,7 @@ export const getCoffeeShops = () => {
     dispatch(setCoffeeShopsLoading());
     try {
       const res = await axios.get("http://coffee.q8fawazo.me/api/?format=json");
+      console.log(res.data);
       const coffeeShops = res.data;
       dispatch({
         type: actionTypes.GET_COFFEESHOPS,
